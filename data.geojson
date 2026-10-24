@@ -3,7 +3,8 @@
   "metadata": {
     "title": "Карта рисков для переезда семьи",
     "date": "2026-10-22",
-    "disclaimer": "Не является официальной картой ЗОУИТ/ПЗЗ/ППТ; схематические линии нельзя использовать для проверки участка."
+    "disclaimer": "Проектные дороги и ВСМ приблизительно нанесены пунктиром по открытым схемам; пунктир не является утверждённой геометрией ППТ.",
+    "updated": "2026-10-22"
   },
   "features": [
     {
@@ -379,7 +380,9 @@
         "precision": "schematic",
         "detail": "Схематичная цепочка крупных районов, НЕ утверждённый осевой ход. Не применять для расчёта расстояния до участка: фактические границы — в ППТ и на НСПД.",
         "source": "https://base.garant.ru/414408109/",
-        "updated": "2026-10-22"
+        "updated": "2026-10-22",
+        "geometry_accuracy": "schematic-not-for-parcel-checks",
+        "method": "indicative-route-not-digitized-ppd"
       },
       "geometry": {
         "type": "LineString",
@@ -417,7 +420,9 @@
         "precision": "schematic",
         "detail": "Только условное направление для ранней проверки; окончательной утверждённой трассы здесь нет.",
         "source": "https://russianhighways.ru/press/news/154483/",
-        "updated": "2026-10-22"
+        "updated": "2026-10-22",
+        "geometry_accuracy": "schematic-not-for-parcel-checks",
+        "method": "indicative-route-not-digitized-ppd"
       },
       "geometry": {
         "type": "LineString",
@@ -447,7 +452,9 @@
         "precision": "schematic",
         "detail": "Это схема направления 6-го этапа, а не геометрия проектной документации.",
         "source": "https://www.kommersant.ru/doc/8921858",
-        "updated": "2026-10-22"
+        "updated": "2026-10-22",
+        "geometry_accuracy": "schematic-not-for-parcel-checks",
+        "method": "indicative-route-not-digitized-ppd"
       },
       "geometry": {
         "type": "LineString",
@@ -477,7 +484,9 @@
         "precision": "schematic",
         "detail": "Альтернативный вариант для выбора; линия условная, не подтверждает снос или выкуп каких-либо земель.",
         "source": "https://www.kommersant.ru/doc/8921858",
-        "updated": "2026-10-22"
+        "updated": "2026-10-22",
+        "geometry_accuracy": "schematic-not-for-parcel-checks",
+        "method": "indicative-route-not-digitized-ppd"
       },
       "geometry": {
         "type": "LineString",
@@ -511,7 +520,9 @@
         "precision": "schematic",
         "detail": "Условная линия для ориентира; опубликованные ППТ/ПМТ нужно изучить до выводов о точном положении.",
         "source": "https://www.kommersant.ru/doc/8462731",
-        "updated": "2026-10-22"
+        "updated": "2026-10-22",
+        "geometry_accuracy": "schematic-not-for-parcel-checks",
+        "method": "indicative-route-not-digitized-ppd"
       },
       "geometry": {
         "type": "LineString",
@@ -531,36 +542,90 @@
       "type": "Feature",
       "properties": {
         "id": "vsm",
-        "name": "ВСМ Москва—Петербург, Ленобласть (СХЕМА)",
+        "name": "ВСМ Москва — Петербург: по схеме концессионера (ориентировочно)",
         "category": "rail",
-        "status": "Строится / проектируется по этапам",
+        "status": "Строится / проектируется по этапам; линия схематическая",
         "precision": "schematic",
-        "detail": "Условная линия общего юго-восточного направления. НЕ проектная ось ВСМ: реальные земельные ограничения проверять по распоряжениям Росжелдора и ЕГРН.",
-        "source": "https://www.gov.spb.ru/gov/otrasl/c_transport/news/319026/",
-        "updated": "2026-10-22"
+        "detail": "Приблизительное воспроизведение направления по информационной схеме концессионера «ВСМ Две столицы»: Санкт-Петербург-Главный → ТПУ «Южный» у Обухово → переходы М-10/М-11 → Жаровская → эстакада в районе Лисинского заказника. Это не геопривязанная проектная трассировка, не ось и не полоса отвода; не используйте её для измерения расстояния до участка. Проверяйте ППТ и документацию Росжелдора.",
+        "source": "https://vsm2stl.ru/#route",
+        "updated": "2026-10-22",
+        "method": "hand-traced-approx-from-published-schematic",
+        "geometry_accuracy": "schematic-not-for-parcel-checks"
       },
       "geometry": {
         "type": "LineString",
         "coordinates": [
           [
-            30.46,
-            59.89
+            30.362,
+            59.93
           ],
           [
-            30.53,
-            59.82
+            30.381,
+            59.91
           ],
           [
-            30.57,
-            59.72
+            30.413,
+            59.874
           ],
           [
-            30.67,
-            59.63
+            30.453,
+            59.836
           ],
           [
-            30.75,
-            59.47
+            30.467,
+            59.822
+          ],
+          [
+            30.485,
+            59.798
+          ],
+          [
+            30.512,
+            59.767
+          ],
+          [
+            30.529,
+            59.735
+          ],
+          [
+            30.558,
+            59.704
+          ],
+          [
+            30.592,
+            59.661
+          ],
+          [
+            30.635,
+            59.62
+          ],
+          [
+            30.679,
+            59.571
+          ],
+          [
+            30.708,
+            59.543
+          ],
+          [
+            30.726,
+            59.521
+          ],
+          [
+            30.752,
+            59.486
+          ],
+          [
+            30.781,
+            59.454
+          ],
+          [
+            30.806,
+            59.42
+          ],
+          [
+            30.826,
+            59.391
           ]
         ]
       }
