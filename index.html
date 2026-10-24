@@ -50,7 +50,7 @@ const BASE_DATA = {"type":"FeatureCollection","metadata":{"title":"Карта р
  let tileErrors=0;osm.on('tileerror',()=>{if(++tileErrors>=8&&map.hasLayer(osm)){map.removeLayer(osm);map.addLayer(light);document.getElementById('status').textContent='Сервер OSM недоступен. Подключена запасная подложка CARTO.';}});
  const colors={kpo:'#d95044',landfill:'#783d81',quarry:'#ae8233',industrial:'#65789e',air:'#4d86c0',watch:'#ba9743',candidate:'#168958',roads:'#cb6b32',rail:'#b03868'};
  const groups={}; Object.keys(colors).forEach(k=>{groups[k]=L.layerGroup().addTo(map)});
- const schematicRoads=L.layerGroup().addTo(map), schematicRail=L.layerGroup().addTo(map), industrialOSM=L.layerGroup().addTo(map),cpos=L.layerGroup().addTo(map);
+ const schematicRoads=L.featureGroup().addTo(map), schematicRail=L.featureGroup().addTo(map), industrialOSM=L.layerGroup().addTo(map),cpos=L.layerGroup().addTo(map);
  let target=null,osmCount=0, markerObjects=[];
  function safe(s){return String(s||'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));}
  function typeLabel(p){return ({official:'точные координаты из схемы',approx:'приблизительная точка',reported:'опубликованные координаты',locality:'ориентир: населённый пункт',schematic:'примерная схема, НЕ точная трасса',user:'пользовательская точка'})[p.precision]||'проверить';}
